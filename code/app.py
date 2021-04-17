@@ -9,8 +9,17 @@ items = []
 
 
 class Item(Resource):
+
     def get(self, name):
-        pass
+        for item in items:
+            if item['name'] == name:
+                return item
+        return {'item': None}, 404
+
+    def post(self, name):
+        item = {'name': name, 'price': 10.0}
+        items.append(item)
+        return item
 
 
 api.add_resource(Item, '/item/<string:name>')
