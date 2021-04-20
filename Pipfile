@@ -7,6 +7,7 @@ name = "pypi"
 flask-restful = "*"
 fastapi = "*"
 uvicorn = "*"
+flask-jwt = "*"
 
 [dev-packages]
 

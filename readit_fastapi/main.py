@@ -19,7 +19,7 @@ async def get_item(item_name, response: Response):
 async def create_item(item_name):
     item = {
         'name': item_name,
-        'price': 100.0
+        'price': 100.0 
     }
     items.append(item)
     return item
